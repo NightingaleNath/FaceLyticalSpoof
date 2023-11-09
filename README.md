@@ -28,6 +28,10 @@ buildFeatures {
 id 'kotlin-kapt'
 ```
 
+### Step 2b: Getting Your Key
+
+Contact CodeLytical to obtain the encoded key for your project. This key is required for initializing the library.
+
 ### Step 3: Initialize LyticalSpoof
 
 ```kotlin
