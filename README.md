@@ -122,3 +122,14 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
 
 - Check out our [CodeLytical](https://www.youtube.com/@codelytical) for video tutorials and updates.
 
+## Contact Us
+
+For any inquiries, assistance, or support, feel free to reach out to us:
+
+- **Email:** [codehacker768@gmail.com](mailto:codehacker768@gmail.com)
+- **WhatsApp:** [+233248865955](https://wa.me/233248865955)
+- **Skype:** [live:nath.frema2](skype:live:nath.frema2)
+
+We're here to help you with any questions you may have!
+
+
