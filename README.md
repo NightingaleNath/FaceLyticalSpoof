@@ -107,5 +107,5 @@ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) 
 
 ## Youtube
 
-You can check out our youtube channel at [CodeLytical]([LICENSE](https://www.youtube.com/@codelytical)).
+- Check out our [CodeLytical](https://www.youtube.com/@codelytical) for video tutorials and updates.
 
