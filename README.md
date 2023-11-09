@@ -26,8 +26,9 @@ buildFeatures {
 }
 
 id 'kotlin-kapt'
+```
 
-## Step 3: Initialize LyticalSpoof
+### Step 3: Initialize LyticalSpoof
 
 ```kotlin
 private var livenessCameraLibrary: LivenessCameraLibrary? = null
@@ -56,4 +57,55 @@ livenessCameraLibrary?.setEncodedKey(encodedKey, applicationContext.packageName)
     }
 }
 
+```
+### Step 4: Launch LyticalSpoof
+
+```
+capturedImage = findViewById(R.id.capturedImage)
+startCameraX = findViewById(R.id.startCameraX)
+
+// Launch LyticalSpoof
+startCameraX.setOnClickListener {
+    livenessCameraLibrary?.launchLivenessCamera(3000, true) { capturedImageUri ->
+        if (capturedImageUri != null) {
+            val bitmap = livenessCameraLibrary?.uriToBitmap(capturedImageUri)
+            capturedImage?.setImageURI(capturedImageUri)
+            // If you want to use base64String of the captured face
+             if (bitmap != null) {
+                  val base64String = livenessCameraLibrary?.bitmapToBase64(bitmap)
+                  if (base64String != null) {
+                      // Now you have the image in base64String
+                      Log.e("TAG", "base64String encoding bitmap to base64 $base64String")
+                  } else {
+                      // Handle base64 encoding error
+                      Log.e("TAG", "Error encoding bitmap to base64")
+                  }
+              } else {
+                  // Handle bitmap conversion error
+                  Log.e("TAG", "Error converting URI to Bitmap")
+              }
+            // Handle the captured image as needed
+        } else {
+            Log.d("TAG", "onCreate: Nothing")
+        }
+    }
+}
+```
+
+### Step 5: Handle Activity Result
+```
+override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    super.onActivityResult(requestCode, resultCode, data)
+    if (requestCode == LIVENESS_CAMERA_REQUEST_CODE) {
+        livenessCameraLibrary?.handleCaptureResult(resultCode, data)
+    }
+}
+```
+## Additional Information
+
+- For more details and customization options, contact CodeLytical for any support or inquiries.
+
+## Youtube
+
+You can check out our youtube channel at [CodeLytical]([LICENSE](https://www.youtube.com/@codelytical)).
 
