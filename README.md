@@ -2,6 +2,15 @@
 
 Welcome to the LyticalSpoof Android SDK! This SDK allows you to integrate face liveness detection into your Android application, ensuring a secure and reliable user authentication process.
 
+Robust, Realtime, On-Device Face Liveness Detection
+
+[![Website](https://img.shields.io/badge/Website-https://kpro.netlify.app/-blue)](https://kpro.netlify.app/)
+[![YouTube](https://img.shields.io/badge/YouTube-Codelytical-red)](https://www.youtube.com/@codelytical)
+
+## Introduction
+
+LyticalSpoof provides robust, real-time, on-device face liveness detection for your applications. 
+
 ## Getting Started
 
 To use LyticalSpoof in your project, follow these steps:
