@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         startCameraX = findViewById(R.id.startCameraX)
 
         startCameraX.setOnClickListener {
-            livenessCameraLibrary?.launchLivenessCamera(3000, true) { capturedImageUri ->
+            livenessCameraLibrary?.launchLivenessCamera(captureDelaySeconds = 3000, shouldCapture = true) { capturedImageUri ->
                 if (capturedImageUri != null) {
                     val bitmap = livenessCameraLibrary?.uriToBitmap(capturedImageUri)
                     capturedImage?.setImageURI(capturedImageUri)
